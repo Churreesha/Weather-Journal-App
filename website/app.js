@@ -22,8 +22,8 @@ generate.addEventListener('click', () => {
   .then(function (userInfo) {
 
     postData('/post', { date: newDate, temperature:userInfo.main.temp, feelings:content })
-  }).then(function (newData) {
-    console.log('This is the user data',newData);
+  }).then(function (newInfo) {
+    console.log('This is the user data',newInfo);
     renewUI()
   })
 
