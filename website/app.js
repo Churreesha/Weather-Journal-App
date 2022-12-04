@@ -21,7 +21,9 @@ generate.addEventListener('click', () => {
   getInfo(`${baseURL}${zipCode}${apiKey}`)
   .then(function (userInfo) {
 
-    postData('/post', { date: newDate, temperature:userInfo.main.temp, feelings:content })
+    postData('/post', { date: newDate, 
+                       temperature: userInfo.main.temp, 
+                       feelings: content })
   }).then(function (newInfo) {
     console.log('This is the user data',newInfo);
     renewUI()
