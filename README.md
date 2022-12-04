@@ -7,5 +7,6 @@ I achieved this through four steps:
 2. Wrote GET Routes and POST routes to acquire data for the app
 3. Acquired API Key and BaseURL from the OpenWeatherMap website to fetch weather stats using Async Functions.
 4. Dynamically updating the UI to post current data for the user
-*This project consist of HTML, CSS, JavaScript, Node and Express
+
+This project consist of HTML, CSS, JavaScript, Node and Express
 
