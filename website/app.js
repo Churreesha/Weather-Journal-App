@@ -16,11 +16,11 @@ generate.addEventListener('click', () => {
   getInfo(`${baseURL}${zipCode}${apiKey}`)
   .then(function (userInfo) {
 
-    postData('/post', { date: newDate,
-                        temperature:userInfo.main.temperature,
-                        feelings:content })
+    postData('/post',{ date: newDate,
+                       temp: userInfo.main.temp,
+                       feelings:content })
   }).then(function (newData) {
-    console.log('This is the user data',newData);
+    console.log('This is the user data', newData);
     renewUI()
   })
 
@@ -33,6 +33,7 @@ const getInfo = async (baseURL, zipCode, apiKey) => {
   console.log(result);
   const req = await fetch(result);
   try {
+
     const userInfo = await req.json();
     console.log("the user info is: ", userInfo);
     return userInfo;
@@ -55,9 +56,9 @@ const postData = async (baseURL = "https://api.openweathermap.org/data/2.5/weath
   });
   try {
     const newData = await req.json();
-    const temperature = newData.main.temperature;
+    const temp = newData.main.temp;
     console.log("We got the data now", newData);
-    return ({ temperature: temperature.newData.temperature });
+    return ({ temp: temp.newData.temp });
   } catch (error) {
     console.log("error", error);
   }
@@ -71,7 +72,7 @@ const renewUI = async () => {
    const renewedData = await req.json();
    console.log('This is the current data', renewedData);
    document.querySelector('#date').innerHTML = renewedData.date;
-   document.querySelector('#temp').innerHTML = renewedData.temperature;
+   document.querySelector('#temp').innerHTML = renewedData.main.temp;
    document.querySelector('#content').innerHTML = renewedData.feelings;
 
 
@@ -79,5 +80,4 @@ const renewUI = async () => {
     console.log("error", error);
   }
 };
-
 
