@@ -11,49 +11,21 @@ body{
     background:rgb(7, 7, 103);
     color:  #02fb8b;
     justify-content: center;
-    grid-gap: 1em;
+    grid-gap: 0.1em;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }
 
-.holder{
-
-}
 
 .entry{
     background: yellow;
     color:rgb(7, 7, 103);
-    height: 100px;
+    height: 200px;
     width: 430px;
     grid-gap: 1em;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }
-
-#entryHolder{
-
-
-}
-
-#date{
-
-}
-
-#temp{
-
-}
-
-#content{
-
-}
-
-.headline {
-
-}
-.title{
-
-}
-
 /*  Basic Styling To Override Default For Basic HTML Elements */
 label{
     display:block;
@@ -92,7 +64,7 @@ textarea{
     color: rgb(7, 7, 103);
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
-    height: 100px;
+    height: 85px;
 }
 /* Reset style for HTML element on active to have no border*/
 input:focus,
@@ -119,12 +91,12 @@ button:focus {
     font-family: 'Oswald', sans-serif;
 
 }
-@media (min-width: 672px) and (max-width: 1024px) {
+@media (min-width: 600px) and (max-width: 1024px) {
     app{
         display: grid;
         grid-auto-rows: minmax(100px, auto);
         /* grid-template-columns:  */
-        height:200vh;
+        height: 15px;
         background: rgb(7, 7, 103);
         color: #02fb8b;
         justify-content: center;
