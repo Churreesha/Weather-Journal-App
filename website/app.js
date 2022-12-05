@@ -72,7 +72,7 @@ const renewUI = async () => {
    const renewedData = await req.json();
    console.log('This is the current data', renewedData);
    document.querySelector('#date').innerHTML = renewedData.date;
-   document.querySelector('#temp').innerHTML = renewedData.main.temp;
+   document.querySelector('#temp').innerHTML = Math.round(renewedData.temp)+ 'Degrees';
    document.querySelector('#content').innerHTML = renewedData.feelings;
 
 
